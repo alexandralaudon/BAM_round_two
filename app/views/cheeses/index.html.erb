@@ -1,1 +1,9 @@
 List of Cheeses
+
+<%= link_to "New Cheese", new_cheese_path %>
+
+<% @cheeses.each do |cheese| %>
+
+  <%= link_to "#{cheese.name} - $#{cheese.price_per_lb}", cheese_path(cheese.id) %>
+  <br>
+<% end %>
